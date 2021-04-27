@@ -1,0 +1,48 @@
+%button {
+  display: inline-grid;
+  padding: var(--padding-top--button) var(--padding-right--button) var(--padding-bottom--button) var(--padding-right--button);
+  font-size: var(--font-size--button);
+  line-height: var(--line-height--button);
+  border: none;
+  text-decoration: none;
+  transition: opacity .2s ease-in-out;
+  @include interaction {
+    opacity: 0.85;
+  }
+  @include from-mobile {
+    & + & {
+      margin-left: 12px;
+    }
+  }
+  @include till-small-tablet {
+    width: 100%;
+  }
+}
+%button--white {
+  background-color: var(--color--white);
+  color: var(--black-color--first);
+}
+%button--first-accent {
+  background-color: var(--accent-color--first);
+  color: var(--black-color--first);
+}
+%button--second-accent {
+  background-color: var(--accent-color--second);
+  color: var(--black-color--first);
+}
+
+input[type="submit"] {
+  @extend %button;
+}
+button {
+  @extend %button;
+}
+.button {
+  @extend %button;
+}
+.button--first-accent {
+  @extend %button--first-accent;
+}
+.button--second-accent {
+  @extend %button--second-accent;
+}

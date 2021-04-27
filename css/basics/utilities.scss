@@ -1,0 +1,65 @@
+.u-float-left {
+  float: left;
+}
+.u-float-right {
+  float: right;
+}
+.u-float-none {
+  float: none;
+}
+
+.u-h1 {
+  @extend %h1;
+}
+.u-h2 {
+  @extend %h2;
+}
+.u-h3 {
+  @extend %h3;
+}
+.u-h4 {
+  @extend %h4;
+}
+.u-h5 {
+  @extend %h5;
+}
+.u-h6 {
+  @extend %h6;
+}
+
+.u-padding-top-none {
+  padding-top: 0;
+}
+.u-padding-top-object {
+  padding-top: var(--padding-top--object);
+}
+
+.u-padding-right-object {
+  padding-right: var(--padding-right--object);
+}
+
+.u-padding-bottom-none {
+  padding-bottom: 0;
+}
+.u-padding-bottom-object {
+  padding-bottom: var(--padding-top--object);
+}
+
+.u-padding-left-object {
+  padding-left: var(--padding-left--object);
+}
+
+.u-box-sizing-border-box {
+  box-sizing: border-box;
+}
+
+.u-box-shadow-soft {
+  box-shadow: 0 0 12px 0 rgba(36, 35, 35, 0.1);
+}
+.u-box-shadow-hard {
+  box-shadow: 0 0 18px 0 rgba(36, 35, 35, 0.2);
+}
+
+.u-text {
+  @include text;
+}

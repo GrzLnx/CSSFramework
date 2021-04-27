@@ -1,0 +1,109 @@
+%field {
+  width: 100%;
+  padding: var(--padding-top--form-field) var(--padding-right--form-field) var(--padding-bottom--form-field) var(--padding-left--form-field);
+  box-sizing: border-box;
+  font-family: var(--font-family--text);
+  font-size: var(--font-size--text);
+  line-height: var(--line-height--regular);
+  border: 1px solid var(--border-color--form-field);
+  outline: none;
+  @include interaction {
+    border-color: var(--border-color-hover--form-field);
+  }
+}
+.form__row {
+  margin-bottom: var(--margin-bottom--form-row);
+}
+.form__field {
+  margin-bottom: var(--margin-bottom--form-field);
+}
+.form__label-text {
+  display: block;
+  margin-bottom: var(--margin-bottom--form-label-text);
+}
+.form__radio-field {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  @include interaction {
+    color: var(--accent-color--first);
+  }
+}
+.form__checkbox-field {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  @include interaction {
+    color: var(--accent-color--first);
+  }
+}
+input[type="text"] {
+  @extend %field;
+}
+input[type="number"] {
+  @extend %field;
+}
+input[type="date"] {
+  @extend %field;
+}
+input[type="password"] {
+  @extend %field;
+}
+input[type="checkbox"] {
+  display: none;
+  &:checked + .form__checkbox-icon::before {
+    background-color: var(--accent-color--first);
+  }
+}
+input[type="radio"] {
+  display: none;
+  &:checked + .form__radio-icon::before {
+    background-color: var(--accent-color--first);
+  }
+}
+.form__radio-icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  box-sizing: border-box;
+  &::before {
+    position: absolute;
+    content: '';
+    border-radius: inherit;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background-color: transparent;
+  }
+}
+.form__checkbox-icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid currentColor;
+  box-sizing: border-box;
+  &::before {
+    position: absolute;
+    content: '';
+    border-radius: 1px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background-color: transparent;
+  }
+}
+textarea {
+
+}
+.form__button {
+
+}

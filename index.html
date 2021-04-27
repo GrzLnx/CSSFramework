@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+<body>
+    <section class="background-color--accent-first">
+        <div class="grid-parent layout-wrapper">
+            <div class="grid-child u-box-shadow-soft">
+                <h1>Test titel</h1>
+                <p>Test tekst</p>
+                <p><a href="#" class="button button--first-accent">Een knop</a></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="grid-parent layout-wrapper">
+            <div class="grid-child grid-child--5 u-box-shadow-hard">
+                <p>Test tekst met een link. <a href="#">Dit is de link.</a></p>
+                <p><button class="button--first-accent">Test 1</button><button class="button--second-accent">Test 2</button></p>
+            </div>
+            <div class="grid-child grid-child--7 background-color--accent-first">
+                <p>Tekst in een blok met een achtergrond. <a href="#">Dit is een link.</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="background-color--accent-second">
+        <div class="grid-parent layout-wrapper">
+            <div class="grid-child grid-child--6">
+                <h4>Titel</h4>
+                <p>Tekst</p>
+            </div>
+            <div class="grid-child grid-child--6">
+                <h4>Titel</h4>
+                <p>Tekst</p>
+            </div>
+            <div class="grid-child u-text">
+                <p>Test</p>
+                <ul>
+                    <li>Een</li>
+                    <li>Een</li>
+                    <li>Een</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="grid-parent layout-wrapper">
+            <form action="#" class="grid-child">
+                <fieldset>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label>
+                                <span class="form__label-text">Voornaam</span>
+                                <input type="text" name="firstname">
+                            </label>
+                        </div>
+                        <div class="form__field">
+                            <label>
+                                <span class="form__label-text">Achternaam</span>
+                                <input type="text" name="lastname">
+                            </label>
+                        </div>
+                        <div class="form__field">
+                            <label>
+                                <span class="form__label-text">Geslacht </span>
+                                <label class="form__radio-field">
+                                    <input type="radio" name="gender" value="1"><span class="form__radio-icon"></span> Man ( normaal )
+                                </label>
+                                <label class="form__radio-field">
+                                    <input type="radio" name="gender" value="2"><span class="form__radio-icon"></span> Vrouw ( normaal )
+                                </label>
+                                <label class="form__radio-field">
+                                    <input type="radio" name="gender" value="3"><span class="form__radio-icon"></span> Anders ( raar )
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label>
+                                <span class="form__label-text">Wachtwoord</span>
+                                <input type="password" name="password">
+                            </label>
+                        </div>
+                        <div class="form__field">
+                            <label class="form__checkbox-field">
+                                <input type="checkbox" name="save-password"><span class="form__checkbox-icon"></span>
+                                <span class="form__checkbox-text">Wachtwoord opslaan</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form__row">
+                        <div class="form__button">
+                            <input type="submit" class="button--first-accent" value="Verzenden">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

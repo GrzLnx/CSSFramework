@@ -1,0 +1,74 @@
+body {
+}
+
+section {
+  padding-top: var(--padding-top--section);
+  padding-bottom: var(--padding-bottom--section);
+}
+
+.layout-wrapper {
+  max-width: 1548px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: repeat( 12, 1fr );
+}
+
+.grid-child {
+  display: inline-grid;
+  width: 100%;
+  margin-bottom: var(--margin-bottom--object);
+  padding: 0 var(--padding-right--object) 0 var(--padding-left--object);
+  grid-column: span 12;
+  box-sizing: border-box;
+  &.background-color--accent-first,
+  &.background-color--accent-second {
+    width: calc((100% - var(--margin-right--object) - var(--margin-left--object)));
+    margin-right: var(--margin-right--object);
+    margin-left: var(--margin-left--object);
+    padding: var(--padding--object);
+  }
+}
+
+.grid-child--11 { grid-column: span 11; }
+.grid-child--10 { grid-column: span 10; }
+.grid-child--9 { grid-column: span 9; }
+.grid-child--8 { grid-column: span 8; }
+.grid-child--7 { grid-column: span 7; }
+.grid-child--6 { grid-column: span 6; }
+.grid-child--5 { grid-column: span 5; }
+.grid-child--4 { grid-column: span 4; }
+.grid-child--3 { grid-column: span 3; }
+.grid-child--2 { grid-column: span 2; }
+.grid-child--1 { grid-column: span 1; }
+
+.background-color--accent-first {
+  color: var(--text-color--first-accent-background);
+  background-color: var(--accent-color--first);
+  a:not(.button) {
+    color: var(--link-color--first-accent-background);
+    @include interaction {
+      color: var(--link-color-hover--first-accent-background);
+    }
+  }
+  .button--first-accent {
+    @extend %button--white;
+  }
+}
+
+.background-color--accent-second {
+  color: var(--text-color--second-accent-background);
+  background-color: var(--accent-color--second);
+  a:not(.button) {
+    color: var(--link-color--second-accent-background);
+    @include interaction {
+      color: var(--link-color-hover--second-accent-background);
+    }
+  }
+  .button--second-accent {
+    @extend %button--white;
+  }
+}

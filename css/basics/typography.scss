@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'linearicons';
+  src: './fonts/linearicons.ttf';
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family--text);
+  font-size: var(--font-size--text);
+  line-height: var(--line-height--regular);
+  color: var(--text-color--first);
+}
+
+h1, h2, h3, h4, h5, h6,
+.u-h1, .u-h2, .u-h3, .u-h4, .u-h5, .u-h6 {
+  font-family: var(--font-family--title);
+  margin-top: 0;
+}
+
+%h1 {
+  font-size: var(--font-size--h1);
+  font-weight: var(--font-weight--h1);
+  line-height: var(--line-height--h1);
+  margin-bottom: var(--margin-bottom--h1);
+}
+h1 {
+  @extend %h1;
+}
+%h2 {
+  font-size: var(--font-size--h2);
+  font-weight: var(--font-weight--h2);
+  line-height: var(--line-height--h2);
+  margin-bottom: var(--margin-bottom--h2);
+}
+h2 {
+  @extend %h2;
+}
+%h3 {
+  font-size: var(--font-size--h3);
+  font-weight: var(--font-weight--h3);
+  line-height: var(--line-height--h3);
+  margin-bottom: var(--margin-bottom--h3);
+}
+h3 {
+  @extend %h3;
+}
+%h4 {
+  font-size: var(--font-size--h4);
+  font-weight: var(--font-weight--h4);
+  line-height: var(--line-height--h4);
+  margin-bottom: var(--margin-bottom--h4);
+}
+h4 {
+  @extend %h4;
+}
+%h5 {
+  font-size: var(--font-size--h5);
+  font-weight: var(--font-weight--h5);
+  line-height: var(--line-height--h5);
+  margin-bottom: var(--margin-bottom--h5);
+}
+h5 {
+  @extend %h5;
+}
+%h6 {
+  font-size: var(--font-size--h1);
+  font-weight: var(--font-weight--h6);
+  line-height: var(--line-height--h1);
+  margin-bottom: var(--margin-bottom--h1);
+}
+h6 {
+  @extend %h6;
+}
+
+a:not(.button) {
+  color: var(--link-color--light-background);
+  font-weight: var(--link--font-weight);
+  text-decoration: var(--link--text-decoration);
+  @include interaction {
+    color: var(--link-color-hover--light-background);
+  }
+}
+p {
+  margin-top: 0;
+  margin-bottom: var(--margin-bottom--p);
+}
+
+@mixin list-bullets( $type: 'round-bullets' ) {
+
+  margin-bottom: var( --margin-bottom--list );
+  @if( $type == 'auto' ) {
+    list-style-position: inside;
+    li {
+      margin: 5px 0;
+    }
+  }
+  @if( $type == 'round-bullets' ) {
+    li {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 5px 0;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 7px;
+        width: 7px;
+        margin-right: 7px;
+        background-color: currentColor;
+        border-radius: 50%;
+      }
+    }
+  }
+  @if( $type == 'square-bullets' ) {
+    li {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 5px 0;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 7px;
+        width: 7px;
+        margin-right: 7px;
+        background-color: currentColor;
+        border-radius: 50%;
+      }
+    }
+  }
+  @if( $type == 'check-marks' ) {
+    li {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 5px 0;
+      &::before {
+        content: "\F00C";
+        display: inline-block;
+        margin-right: 7px;
+        font-family: "FontAwesome", var( --font-family--back-up );
+        font-size: var( --font-size--text );
+      }
+    }
+  }
+  @if( $type == 'cross-marks' ) {
+    li {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 5px 0;
+      &::before {
+        content: "\F00D";
+        display: inline-block;
+        margin-right: 7px;
+        font-family: "FontAwesome", var( --font-family--back-up );
+        font-size: var( --font-size--text );
+      }
+    }
+  }
+  @if( $type == 'arrows' ) {
+    li {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 5px 0;
+      &::before {
+        content: "\F061";
+        display: inline-block;
+        margin-right: 7px;
+        font-family: "FontAwesome", var( --font-family--back-up );
+        font-size: var( --font-size--text );
+      }
+    }
+  }
+  @if( $type == 'numbers' ) {
+    list-style-type: decimal;
+    list-style-position: inside;
+    li {
+      margin: 5px 0;
+    }
+  }
+  @if( $type == 'roman-numbers' ) {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    li {
+      margin: 5px 0;
+    }
+  }
+
+}
+
+@mixin text {
+
+  ul {
+    @include list-bullets;
+  }
+  ol {
+    @include list-bullets( $type: 'numbers' );
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+}
