@@ -25,6 +25,7 @@
   display: flex;
   width: 100%;
   align-items: center;
+  cursor: pointer;
   @include interaction {
     color: var(--accent-color--first);
   }
@@ -33,6 +34,7 @@
   display: flex;
   width: 100%;
   align-items: center;
+  cursor: pointer;
   @include interaction {
     color: var(--accent-color--first);
   }
@@ -61,13 +63,13 @@ input[type="radio"] {
     background-color: var(--accent-color--first);
   }
 }
-.form__radio-icon {
+%form-icon {
   position: relative;
   display: inline-block;
-  margin-right: 4px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
+  margin-right: 6px;
+  margin-bottom: 1px;
+  width: 15px;
+  height: 15px;
   border: 1px solid currentColor;
   box-sizing: border-box;
   &::before {
@@ -81,24 +83,18 @@ input[type="radio"] {
     background-color: transparent;
   }
 }
-.form__checkbox-icon {
-  position: relative;
-  display: inline-block;
-  margin-right: 4px;
-  width: 14px;
-  height: 14px;
-  border-radius: 2px;
-  border: 1px solid currentColor;
-  box-sizing: border-box;
+.form__radio-icon {
+  @extend %form-icon;
+  border-radius: 50%;
   &::before {
-    position: absolute;
-    content: '';
+    border-radius: inherit;
+  }
+}
+.form__checkbox-icon {
+  @extend %form-icon;
+  border-radius: 2px;
+  &::before {
     border-radius: 1px;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    background-color: transparent;
   }
 }
 textarea {
