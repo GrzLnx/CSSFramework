@@ -1,110 +1,124 @@
 :root {
-  --color--white:                                                 #FFFFFF;
-  --color--black:                                                 #000000;
+  --color--white: #FFFFFF;
+  --color--black: #000000;
 
-  --black-color--first:                                           #111111;
-  --black-color--second:                                          #242323;
-  --black-color--third:                                           #323131;
+  --black-color--first: #111111;
+  --black-color--second: #242323;
+  --black-color--third: #323131;
 
-  --accent-color--first:                                          #F223FD;
-  --accent-color--second:                                         #00FF03;
+  --accent-color--first: #F223FD;
+  --accent-color--second: #00FF03;
 
-  --text-color--first:                                            #323131;
-  --text-color--light-background:                                 #323131;
-  --text-color--dark-background:                                  #FFFFFF;
-  --text-color--first-accent-background:                          #323131;
-  --text-color--second-accent-background:                         #323131;
+  --text-color--first: #323131;
+  --text-color--light-background: #323131;
+  --text-color--dark-background: #FFFFFF;
+  --text-color--first-accent-background: #323131;
+  --text-color--second-accent-background: #323131;
 
-  --border-color--form-field:                                     #E4E3E3;
-  --border-color-hover--form-field:                               #F223FD;
+  --border-color--form-field: #E4E3E3;
+  --border-color-hover--form-field: #F223FD;
 
-  --status-color--succes:                                         #8CF258;
-  --status-color--neutral:                                        orange;
-  --status-color--error:                                          #CE0018;
+  --status-color--succes: #8CF258;
+  --status-color--neutral: orange;
+  --status-color--error: #CE0018;
 
-  --font-size--text:                                              1.6rem;
-  --font-size--h1:                                                5.2rem;
-  --font-size--h2:                                                4.6rem;
-  --font-size--h3:                                                4rem;
-  --font-size--h4:                                                3.2rem;
-  --font-size--h5:                                                2.6rem;
-  --font-size--h6:                                                2rem;
-  --font-size--button:                                            1.6rem;
+  --font-size--text: 1.6rem;
+  --font-size--h1: 5.2rem;
+  --font-size--h2: 4.6rem;
+  --font-size--h3: 4rem;
+  --font-size--h4: 3.2rem;
+  --font-size--h5: 2.6rem;
+  --font-size--h6: 2rem;
+  --font-size--button: 1.6rem;
 
-  --line-height--large:                                           2;
-  --line-height--medium:                                          1.8;
-  --line-height--regular:                                         1.5;
-  --line-height--small:                                           1.25;
-  --line-height--smallest:                                        1;
-  --line-height--h1:                                              1.4;
-  --line-height--h2:                                              1.4;
-  --line-height--h3:                                              1.4;
-  --line-height--h4:                                              1.4;
-  --line-height--h5:                                              1.4;
-  --line-height--h6:                                              1.4;
-  --line-height--button:                                          1.5;
+  --line-height--large: 2;
+  --line-height--medium: 1.8;
+  --line-height--regular: 1.5;
+  --line-height--small: 1.25;
+  --line-height--smallest: 1;
+  --line-height--h1: 1.4;
+  --line-height--h2: 1.4;
+  --line-height--h3: 1.4;
+  --line-height--h4: 1.4;
+  --line-height--h5: 1.4;
+  --line-height--h6: 1.4;
+  --line-height--button: 1.5;
 
-  --font-weight--heavy:                                           900;
-  --font-weight--bold:                                            700;
-  --font-weight--medium:                                          500;
-  --font-weight--regular:                                         400;
-  --font-weight--light:                                           300;
-  --font-weight--lighter:                                         100;
-  --font-weight--h1:                                              700;
-  --font-weight--h2:                                              700;
-  --font-weight--h3:                                              700;
-  --font-weight--h4:                                              700;
-  --font-weight--h5:                                              700;
-  --font-weight--h6:                                              700;
+  --font-weight--heavy: 900;
+  --font-weight--bold: 700;
+  --font-weight--medium: 500;
+  --font-weight--regular: 400;
+  --font-weight--light: 300;
+  --font-weight--lighter: 100;
+  --font-weight--h1: 700;
+  --font-weight--h2: 700;
+  --font-weight--h3: 700;
+  --font-weight--h4: 700;
+  --font-weight--h5: 700;
+  --font-weight--h6: 700;
 
-  --font-family--text:                                            'Lexend';
-  --font-family--title:                                           'Lexend';
-  --font-family--back-up:                                         sans-serif;
+  --font-family--text: 'Lexend';
+  --font-family--title: 'Lexend';
+  --font-family--back-up: sans-serif;
 
-  --link--font-weight:                                            400;
-  --link--text-decoration:                                        underline;
-  --link-color--light-background:                                 var(--accent-color--first);
-  --link-color-hover--light-background:                           var(--accent-color--second);
-  --link-color--first-accent-background:                          var(--text-color--first-accent-background);
-  --link-color-hover--first-accent-background:                    var(--color--white);
-  --link-color--second-accent-background:                         var(--text-color--first-accent-background);
-  --link-color-hover--second-accent-background:                   var(--color--white);
+  --link--font-weight: 400;
+  --link--text-decoration: underline;
+  --link-color--light-background: var(--accent-color--first);
+  --link-color-hover--light-background: var(--accent-color--second);
+  --link-color--first-accent-background: var(--text-color--first-accent-background);
+  --link-color-hover--first-accent-background: var(--color--white);
+  --link-color--second-accent-background: var(--text-color--first-accent-background);
+  --link-color-hover--second-accent-background: var(--color--white);
 
-  --margin-right--object:                                         24px;
+  --margin-right--object: 24px;
 
-  --margin-left--object:                                          24px;
+  --margin-left--object: 24px;
 
-  --margin-bottom--section:                                       0;
-  --margin-bottom--object:                                        48px;
-  --margin-bottom--h1:                                            24px;
-  --margin-bottom--h2:                                            24px;
-  --margin-bottom--h3:                                            24px;
-  --margin-bottom--h4:                                            24px;
-  --margin-bottom--h5:                                            24px;
-  --margin-bottom--h6:                                            24px;
-  --margin-bottom--p:                                             16px;
-  --margin-bottom--list:                                          24px;
-  --margin-bottom--form-row:                                      16px;
-  --margin-bottom--form-field:                                    8px;
-  --margin-bottom--form-label-text:                               4px;
+  --margin-bottom--section: 0;
+  --margin-bottom--object: 48px;
+  --margin-bottom--h1: 24px;
+  --margin-bottom--h2: 24px;
+  --margin-bottom--h3: 24px;
+  --margin-bottom--h4: 24px;
+  --margin-bottom--h5: 24px;
+  --margin-bottom--h6: 24px;
+  --margin-bottom--p: 16px;
+  --margin-bottom--list: 24px;
+  --margin-bottom--form-row: 16px;
+  --margin-bottom--form-field: 8px;
+  --margin-bottom--form-label-text: 4px;
 
-  --padding--object:                                              24px;
+  --padding--object: 24px;
 
-  --padding-top--button:                                          12px;
-  --padding-top--object:                                          24px;
-  --padding-top--form-field:                                      8px;
-  --padding-top--section:                                         168px;
+  --padding-top--button: 12px;
+  --padding-top--object: 24px;
+  --padding-top--form-field: 8px;
+  --padding-top--section: 168px;
 
-  --padding-right--object:                                        24px;
-  --padding-right--form-field:                                    16px;
-  --padding-right--button:                                        42px;
+  --padding-right--object: 24px;
+  --padding-right--form-field: 16px;
+  --padding-right--button: 42px;
 
-  --padding-bottom--button:                                       12px;
-  --padding-bottom--object:                                       24px;
-  --padding-bottom--form-field:                                   8px;
-  --padding-bottom--section:                                      120px;
+  --padding-bottom--button: 12px;
+  --padding-bottom--object: 24px;
+  --padding-bottom--form-field: 8px;
+  --padding-bottom--section: 120px;
 
-  --padding-left--object:                                         24px;
-  --padding-left--form-field:                                     16px;
-  --padding-left--button:                                         42px;
+  --padding-left--object: 24px;
+  --padding-left--form-field: 16px;
+  --padding-left--button: 42px;
+}
+
+@include till-small-tablet {
+  :root {
+    --margin-right--object: 12px;
+
+    --margin-left--object: 12px;
+
+    --padding--object: 24px 12px;
+
+    --padding-right--object: 12px;
+
+    --padding-left--object: 12px;
+  }
 }

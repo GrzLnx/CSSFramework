@@ -1,0 +1,85 @@
+@mixin responsive-layout {
+
+  &--grid-parent {
+    display: grid;
+    grid-template-columns: repeat( 12, 1fr );
+  }
+
+  /* Background colors are not included, would probably be used very rarely and
+     costs too much file size. */
+  &--grid-child {
+    display: inline-grid;
+    width: 100%;
+    margin-bottom: var(--margin-bottom--object);
+    padding: 0 var(--padding-right--object) 0 var(--padding-left--object);
+    grid-column: span 12;
+    box-sizing: border-box;
+    &--1 { grid-column: span 1; }
+    &--2 { grid-column: span 2; }
+    &--3 { grid-column: span 3; }
+    &--4 { grid-column: span 4; }
+    &--5 { grid-column: span 5; }
+    &--6 { grid-column: span 6; }
+    &--7 { grid-column: span 7; }
+    &--8 { grid-column: span 8; }
+    &--9 { grid-column: span 9; }
+    &--10 { grid-column: span 10; }
+    &--11 { grid-column: span 11; }
+    &--12 { grid-column: span 12; }
+  }
+
+}
+
+@include from-desktop {
+  .fd {
+    @include responsive-layout;
+  }
+}
+@include till-desktop {
+  .td {
+
+  }
+}
+
+@include from-mobile-menu {
+  .fmm {
+
+  }
+}
+@include till-mobile-menu {
+  .tmm {
+
+  }
+}
+
+@include from-large-tablet {
+  .flt {
+
+  }
+}
+@include only-large-tablet {
+  .olt {
+
+  }
+}
+@include till-large-tablet {
+  .tlt {
+
+  }
+}
+
+@include from-small-tablet {
+  .fst {
+
+  }
+}
+@include only-small-tablet {
+  .ost {
+
+  }
+}
+@include till-small-tablet {
+  .tst {
+
+  }
+}

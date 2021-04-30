@@ -7,6 +7,15 @@
 .u-float-none {
   float: none;
 }
+.uf-float-left {
+  float: left !important;
+}
+.uf-float-right {
+  float: right !important;
+}
+.uf-float-none {
+  float: none !important;
+}
 
 .u-h1 {
   @extend %h1;
@@ -60,6 +69,35 @@
   box-shadow: 0 0 18px 0 rgba(36, 35, 35, 0.2);
 }
 
+.u-border-soft {
+  border: 1px solid #F6F6F6;
+}
+.u-border-hard {
+  border: 1px solid #E4E3E3;
+}
+
 .u-text {
   @include text;
+}
+
+.u-with-space {
+  padding: var(--padding--object);
+  margin-left: var(--margin-left--object);
+  margin-right: var(--margin-right--object);
+}
+
+.u-block {
+  display: block;
+}
+.u-inline-block {
+  display: inline-block;
+}
+.u-none {
+  display: none;
+}
+.u-grid {
+  display: grid;
+}
+.u-grid {
+  display: flex;
 }
