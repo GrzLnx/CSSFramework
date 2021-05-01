@@ -42,9 +42,18 @@
 .u-padding-top-object {
   padding-top: var(--padding-top--object);
 }
+.uf-padding-top-none {
+  padding-top: 0 !important;
+}
+.uf-padding-top-object {
+  padding-top: var(--padding-top--object) !important;
+}
 
 .u-padding-right-object {
   padding-right: var(--padding-right--object);
+}
+.uf-padding-right-object {
+  padding-right: var(--padding-right--object) !important;
 }
 
 .u-padding-bottom-none {
@@ -53,13 +62,25 @@
 .u-padding-bottom-object {
   padding-bottom: var(--padding-top--object);
 }
+.uf-padding-bottom-none {
+  padding-bottom: 0 !important;
+}
+.uf-padding-bottom-object {
+  padding-bottom: var(--padding-top--object) !important;
+}
 
 .u-padding-left-object {
   padding-left: var(--padding-left--object);
 }
+.uf-padding-left-object {
+  padding-left: var(--padding-left--object) !important;
+}
 
 .u-box-sizing-border-box {
   box-sizing: border-box;
+}
+.uf-box-sizing-border-box {
+  box-sizing: border-box !important;
 }
 
 .u-box-shadow-soft {
@@ -68,12 +89,24 @@
 .u-box-shadow-hard {
   box-shadow: 0 0 18px 0 rgba(36, 35, 35, 0.2);
 }
+.uf-box-shadow-soft {
+  box-shadow: 0 0 12px 0 rgba(36, 35, 35, 0.1) !important;
+}
+.uf-box-shadow-hard {
+  box-shadow: 0 0 18px 0 rgba(36, 35, 35, 0.2) !important;
+}
 
 .u-border-soft {
   border: 1px solid #F6F6F6;
 }
 .u-border-hard {
   border: 1px solid #E4E3E3;
+}
+.uf-border-soft {
+  border: 1px solid #F6F6F6 !important;
+}
+.uf-border-hard {
+  border: 1px solid #E4E3E3 !important;
 }
 
 .u-text {
@@ -84,6 +117,11 @@
   padding: var(--padding--object);
   margin-left: var(--margin-left--object);
   margin-right: var(--margin-right--object);
+}
+.uf-with-space {
+  padding: var(--padding--object) !important;
+  margin-left: var(--margin-left--object) !important;
+  margin-right: var(--margin-right--object) !important;
 }
 
 .u-block {
@@ -100,4 +138,19 @@
 }
 .u-grid {
   display: flex;
+}
+.uf-block {
+  display: block !important;
+}
+.uf-inline-block {
+  display: inline-block !important;
+}
+.uf-none {
+  display: none !important;
+}
+.uf-grid {
+  display: grid !important;
+}
+.uf-grid {
+  display: flex !important;
 }

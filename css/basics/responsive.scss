@@ -28,6 +28,17 @@
     &--12 { grid-column: span 12; }
   }
 
+  &--u-with-space {
+    padding: var(--padding--object);
+    margin-left: var(--margin-left--object);
+    margin-right: var(--margin-right--object);
+  }
+  &--uf-with-space {
+    padding: var(--padding--object) !important;
+    margin-left: var(--margin-left--object) !important;
+    margin-right: var(--margin-right--object) !important;
+  }
+
 }
 
 @include from-desktop {
