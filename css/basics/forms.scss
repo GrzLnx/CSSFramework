@@ -63,6 +63,15 @@
   .form-field-status__icon {
     height: 24px;
   }
+  &--inline {
+    .form-field__label {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .form-field__radio {
+      margin-right: 12px;
+    }
+  }
 }
 .form__field-checkboxes {
   .form-field-status__icon {
@@ -81,6 +90,7 @@
 
 .form-field-label__text {
   display: block;
+  width: 100%;
   padding-bottom: var(--margin-bottom--form-label-text);
 }
 
