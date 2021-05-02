@@ -41,56 +41,78 @@
 
 }
 
+@mixin responsive-spaces {
+
+  &--margin-right--object-half {
+    margin-right: calc(var(--margin-right--object) / 2);
+  }
+
+  &--margin-left--object-half {
+    margin-left: calc(var(--margin-left--object) / 2);
+  }
+
+}
+
 @include from-desktop {
   .fd {
     @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 @include till-desktop {
   .td {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 
 @include from-mobile-menu {
   .fmm {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 @include till-mobile-menu {
   .tmm {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 
 @include from-large-tablet {
   .flt {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 @include only-large-tablet {
   .olt {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 @include till-large-tablet {
   .tlt {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 
 @include from-small-tablet {
   .fst {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 @include only-small-tablet {
   .ost {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }
 @include till-small-tablet {
   .tst {
-
+    @include responsive-layout;
+    @include responsive-spaces;
   }
 }

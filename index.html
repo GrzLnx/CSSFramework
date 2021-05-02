@@ -49,7 +49,7 @@
     </section>
     <section>
         <div class="grid-parent layout-wrapper">
-            <form action="#" class="grid-child">
+            <form action="#" class="grid-child" id="test-form">
                 <fieldset>
                     <div class="form__row">
                         <div class="form__field">
@@ -58,13 +58,17 @@
                                 <input type="text" name="firstname">
                             </label>
                         </div>
-                        <div class="form__field">
+                        <div class="form__field" data-field-js-status data-field-js-check="true" data-field-js-checks="required:true">
                             <label>
                                 <span class="form__label-text">Achternaam</span>
                                 <input type="text" name="lastname">
+                                <div class="form__status">
+                                    <span class="form__status-tooltip"></span>
+                                    <span class="form__status-icon"></span>
+                                </div>
                             </label>
                         </div>
-                        <div class="form__field">
+                        <div class="form__field form__field--radio">
                             <label>
                                 <span class="form__label-text">Geslacht </span>
                                 <label class="form__radio-field">
@@ -95,17 +99,196 @@
                                 <span class="form__checkbox-text">Wachtwoord opslaan</span>
                             </label>
                         </div>
+                        <div class="form__field">
+                            <label class="form__label">
+                                <span class="form__label-text">Opmerkingen</span>
+                                <textarea name="notes" rows="3"></textarea>
+                            </label>
+                        </div>
                     </div>
                 </fieldset>
                 <fieldset>
                     <div class="form__row">
                         <div class="form__button">
-                            <input type="submit" class="button--first-accent" value="Verzenden">
+                            <button class="button button--first-accent" onclick="sendForm( 'test-form' )">Verzenden</button>
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
     </section>
+    <section class="u-border-hard">
+        <div class="grid-parent layout-wrapper">
+
+            <div class="grid-child text">
+                <h2>Vul onderstaand formulier in</h2>
+                <p>Lorem ipsum dolar sit amet.</p>
+            </div>
+
+            <form action="#" class="grid-child form" id="test-form-new" data-js-form-check="true">
+
+                <!-- Naam en achternaam -->
+                <fieldset class="form__row">
+
+                    <div class="form__field form__field-text" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Voornaam*</span>
+                            <input type="text" name="firstname" placeholder="Voornaam*" class="form-field__field">
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form__field form__field-text" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Achternaam*</span>
+                            <input type="text" name="lastname" placeholder="Voornaam*" class="form-field__field">
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                </fieldset>
+
+                <!-- Adres, huisnummer, postcode en plaats -->
+                <fieldset class="form__row fd--grid-parent">
+
+                    <div class="form__field form__field-text fd--grid-child--6 fd--margin-right--object-half" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Adres*</span>
+                            <input type="text" name="address" placeholder="Adres*" class="form-field__field">
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form__field form__field-text fd--grid-child--6 fd--margin-left--object-half" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Huisnummer*</span>
+                            <input type="text" name="housenumber" placeholder="Huisnummer*" class="form-field__field">
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form__field form__field-text fd--grid-child--4 fd--margin-right--object-half" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Postcode*</span>
+                            <input type="text" name="zipcode" placeholder="Postcode*" class="form-field__field">
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form__field form__field-text fd--grid-child--8 fd--margin-left--object-half" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Plaats*</span>
+                            <input type="text" name="place" placeholder="Plaats*" class="form-field__field">
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                </fieldset>
+
+                <!-- Geslacht en hobby's -->
+                <fieldset class="form__row">
+
+                    <div class="form__field form__field-radios" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Geslacht*</span>
+                            <label class="form-field__radio">
+                                <input type="radio" name="gender" value="male" class="form-field__field"><span class="form-field-radio__icon"></span>
+                                <span class="form-field-radio__text">Man ( normaal )</span>
+                            </label>
+                            <label class="form-field__radio">
+                                <input type="radio" name="gender" value="female" class="form-field__field"><span class="form-field-radio__icon"></span>
+                                <span class="form-field-radio__text">Vrouw ( normaal )</span>
+                            </label>
+                            <label class="form-field__radio">
+                                <input type="radio" name="gender" value="different" class="form-field__field"><span class="form-field-radio__icon"></span>
+                                <span class="form-field-radio__text">Anders ( raar )</span>
+                            </label>
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form__field form__field-checkboxes" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Hobby's*</span>
+                            <label class="form-field__checkbox">
+                                <input type="checkbox" name="hobbies[]" value="dansen" class="form-field__field"><span class="form-field-checkbox__icon"></span>
+                                <span class="form-field-checkbox__text">Dansen</span>
+                            </label>
+                            <label class="form-field__checkbox">
+                                <input type="checkbox" name="hobbies[]" value="fietsen" class="form-field__field"><span class="form-field-checkbox__icon"></span>
+                                <span class="form-field-checkbox__text">Fietsen</span>
+                            </label>
+                            <label class="form-field__checkbox">
+                                <input type="checkbox" name="hobbies[]" value="slapen" class="form-field__field"><span class="form-field-checkbox__icon"></span>
+                                <span class="form-field-checkbox__text">Slapen</span>
+                            </label>
+                            <label class="form-field__checkbox">
+                                <input type="checkbox" name="hobbies[]" value="eten" class="form-field__field"><span class="form-field-checkbox__icon"></span>
+                                <span class="form-field-checkbox__text">Eten</span>
+                            </label>
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                </fieldset>
+
+                <!-- Opmerkingen en voorwaarden vinkje -->
+                <fieldset class="form__row">
+
+                    <div class="form__field form__field-textarea">
+                        <label class="form-field__label">
+                            <span class="form-field-label__text">Opmerkingen</span>
+                            <textarea name="notes" placeholder="Opmerkingen" class="form-field__field" rows="4"></textarea>
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="form__field form__field-checkbox" data-js-form-field-check="required:true" data-js-form-field-status>
+                        <label class="form-field__checkbox">
+                            <input type="checkbox" name="hobbies[]" value="dansen" class="form-field__field"><span class="form-field-checkbox__icon"></span>
+                            <span class="form-field-checkbox__text">Ja, ik ga akkoord met de voorwaarden*</span>
+                        </label>
+                    </div>
+
+                </fieldset>
+
+                <!-- Verzendknop -->
+                <fieldset class="form__row">
+
+                    <div class="form__field form__field-submit">
+                        <button class="button button--first-accent" onclick="sendForm( 'test-form-new' )">Verzenden</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+        </div>
+    </section>
+    <script src="./js/forms.js" defer="defer"></script>
 </body>
 </html>
