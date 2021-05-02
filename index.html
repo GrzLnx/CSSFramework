@@ -49,76 +49,6 @@
     </section>
     <section>
         <div class="grid-parent layout-wrapper">
-            <form action="#" class="grid-child" id="test-form">
-                <fieldset>
-                    <div class="form__row">
-                        <div class="form__field">
-                            <label>
-                                <span class="form__label-text">Voornaam</span>
-                                <input type="text" name="firstname">
-                            </label>
-                        </div>
-                        <div class="form__field" data-field-js-status data-field-js-check="true" data-field-js-checks="required:true">
-                            <label>
-                                <span class="form__label-text">Achternaam</span>
-                                <input type="text" name="lastname">
-                                <div class="form__status">
-                                    <span class="form__status-tooltip"></span>
-                                    <span class="form__status-icon"></span>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="form__field form__field--radio">
-                            <label>
-                                <span class="form__label-text">Geslacht </span>
-                                <label class="form__radio-field">
-                                    <input type="radio" name="gender" value="1"><span class="form__radio-icon"></span> Man ( normaal )
-                                </label>
-                                <label class="form__radio-field">
-                                    <input type="radio" name="gender" value="2"><span class="form__radio-icon"></span> Vrouw ( normaal )
-                                </label>
-                                <label class="form__radio-field">
-                                    <input type="radio" name="gender" value="3"><span class="form__radio-icon"></span> Anders ( raar )
-                                </label>
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div class="form__row">
-                        <div class="form__field">
-                            <label>
-                                <span class="form__label-text">Wachtwoord</span>
-                                <input type="password" name="password">
-                            </label>
-                        </div>
-                        <div class="form__field">
-                            <label class="form__checkbox-field">
-                                <input type="hidden" name="save-password" value="0">
-                                <input type="checkbox" name="save-password" value="1"><span class="form__checkbox-icon"></span>
-                                <span class="form__checkbox-text">Wachtwoord opslaan</span>
-                            </label>
-                        </div>
-                        <div class="form__field">
-                            <label class="form__label">
-                                <span class="form__label-text">Opmerkingen</span>
-                                <textarea name="notes" rows="3"></textarea>
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div class="form__row">
-                        <div class="form__button">
-                            <button class="button button--first-accent" onclick="sendForm( 'test-form' )">Verzenden</button>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </section>
-    <section class="u-border-hard">
-        <div class="grid-parent layout-wrapper">
 
             <div class="grid-child text">
                 <h2>Vul onderstaand formulier in</h2>
@@ -245,6 +175,10 @@
                                 <input type="checkbox" name="hobbies[]" value="eten" class="form-field__field"><span class="form-field-checkbox__icon"></span>
                                 <span class="form-field-checkbox__text">Eten</span>
                             </label>
+                            <label class="form-field__checkbox">
+                                <input type="checkbox" name="hobbies[]" value="clowning" class="form-field__field"><span class="form-field-checkbox__icon"></span>
+                                <span class="form-field-checkbox__text">Clown zijn ( das Marije )</span>
+                            </label>
                             <span class="form-field__status">
                                 <span class="form-field-status__tooltip"></span>
                                 <span class="form-field-status__icon"></span>
@@ -270,8 +204,12 @@
 
                     <div class="form__field form__field-checkbox" data-js-form-field-check="required:true" data-js-form-field-status>
                         <label class="form-field__checkbox">
-                            <input type="checkbox" name="hobbies[]" value="dansen" class="form-field__field"><span class="form-field-checkbox__icon"></span>
+                            <input type="checkbox" name="optin" value="dansen" class="form-field__field"><span class="form-field-checkbox__icon"></span>
                             <span class="form-field-checkbox__text">Ja, ik ga akkoord met de voorwaarden*</span>
+                            <span class="form-field__status">
+                                <span class="form-field-status__tooltip"></span>
+                                <span class="form-field-status__icon"></span>
+                            </span>
                         </label>
                     </div>
 
